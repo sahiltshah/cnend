@@ -78,9 +78,9 @@ int main()
 
 	unsigned int client_len=sizeof(client);
 	
-	char buff[] = "HELLO";
-  	sendto(rsfd,buff,5,0,(struct sockaddr*)&client,sizeof(client));
-  	perror("send");
+	//char buff[] = "HELLO";
+  	//sendto(rsfd,buff,5,0,(struct sockaddr*)&client,sizeof(client));
+  	//perror("send");
 	
 	struct sockaddr_un userv_addr,ucli_addr;
 
@@ -159,7 +159,7 @@ int main()
 	                      char* buff;
 	                      read(fd[i],buff,100);
 	                      printf("\n%s",buff);
-	                     // printf("\n%c",buff[0]);
+	                      printf("\n%c",buff[0]);
 	                     if(buff[0] =='d')
 	                     { 
 				printf("\nEntered");			
@@ -169,7 +169,8 @@ int main()
 	                     
 	                     else
 	                     {
-	                     	
+	                     	// sendto(rsfd,buff,5,0,(struct sockaddr*)&client,sizeof(client));
+ 				 //perror("send");
 	                     }
 	    		}
 		}
